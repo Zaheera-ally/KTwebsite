@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kenterton Shopping Center | Your KZN Community Convenience Hub</title>
+    <meta name="description" content="Welcome to Kenterton Shopping Center, KwaZulu-Natal. Find groceries at Checksave, tools at Kenterton Hardware, and order easily via WhatsApp Business for home delivery.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Plus+Jakarta+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Sticky Navigation -->
+    <header class="main-header">
+        <div class="container header-container">
+            <a href="#" class="logo">
+                <span class="logo-accent">Kenterton</span> Shopping Center
+            </a>
+            <nav class="nav-menu" id="navMenu">
+                <a href="#about" class="nav-link">About</a>
+                <a href="#deals" class="nav-link">Deals & Tenants</a>
+                <a href="#delivery" class="nav-link">WhatsApp Delivery</a>
+                <a href="#social" class="nav-link">Community Buzz</a>
+                <a href="#notices" class="nav-link">Noticeboard</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </nav>
+            <a href="https://wa.me/27876543210?text=Hi%20Kenterton%20Shopping%20Center!%20I'd%20like%20to%20inquire%20about%20your%20deals%20and%20deliveries." target="_blank" class="btn btn-whatsapp nav-btn">
+                <i class="fab fa-whatsapp"></i> Chat & Order
+            </a>
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle Menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section" id="about">
+        <div class="hero-bg" style="background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.7)), url('assets/hero.jpg');"></div>
+        <div class="container hero-container">
+            <div class="hero-content">
+                <span class="badge badge-primary hero-badge">KwaZulu-Natal's Pride</span>
+                <h1 class="hero-title">Your Friendly Community Convenience Hub</h1>
+                <p class="hero-subtitle">Bringing groceries, hardware, pharmacy essentials, and homeware right to your doorstep. Low prices, flexible lay-bys, and easy WhatsApp ordering!</p>
+                <div class="hero-actions">
+                    <a href="#deals" class="btn btn-primary">Browse Deals</a>
+                    <a href="https://wa.me/27876543210?text=Hi%20Kenterton%20Shopping%20Center!%20I%20want%20to%20place%20a%20delivery%20order." target="_blank" class="btn btn-whatsapp-outline">
+                        <i class="fab fa-whatsapp"></i> Order on WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Info Strip -->
+    <div class="info-strip">
+        <div class="container info-container">
+            <div class="info-item">
+                <div class="info-icon"><i class="fas fa-map-marker-alt"></i></div>
+                <div class="info-text">
+                    <strong>Our Location</strong>
+                    <span>Main Road, Kenterton, KZN</span>
+                </div>
+            </div>
+            <div class="info-item">
+                <div class="info-icon"><i class="fas fa-clock"></i></div>
+                <div class="info-text">
+                    <strong>Opening Hours</strong>
+                    <span>Mon - Sat: 8:00 AM - 6:00 PM</span>
+                </div>
+            </div>
+            <div class="info-item">
+                <div class="info-icon"><i class="fas fa-shipping-fast"></i></div>
+                <div class="info-text">
+                    <strong>WhatsApp Delivery</strong>
+                    <span>Delivered to Kenterton & surrounding areas</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Tenant & Deals Section -->
+    <section class="deals-section" id="deals">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tagline">Save Big Today</span>
+                <h2 class="section-title">Anchor Tenants & Hot Deals</h2>
+                <p class="section-desc">Get the best value on everyday essentials. Choose lay-by at checkout to pay small-small over time!</p>
+            </div>
+
+            <!-- Category Tabs -->
+            <div class="tabs-container">
+                <button class="tab-btn active" data-filter="all">All Specials</button>
+                <button class="tab-btn" data-filter="checksave">Checksave Groceries</button>
+                <button class="tab-btn" data-filter="hardware">Kenterton Hardware</button>
+                <button class="tab-btn" data-filter="other">Pharmacy & Retail</button>
+            </div>
+
+            <!-- Deals Grid -->
+            <div class="deals-grid" id="dealsGrid">
+                
+                <!-- Deal 1 (Checksave) -->
+                <div class="deal-card" data-category="checksave">
+                    <div class="deal-img-wrapper">
+                        <img src="assets/checksave_combo.jpg" alt="Checksave Groceries Combo" class="deal-img">
+                        <span class="deal-badge badge-discount">Combo Deal</span>
+                    </div>
+                    <div class="deal-content">
+                        <div class="deal-tenant">
+                            <span class="tenant-logo-placeholder logo-checksave">Checksave</span>
+                        </div>
+                        <h3 class="deal-title">Super Family Food Combo</h3>
+                        <p class="deal-description">Includes 10kg Iwisa Maize Meal, 2L Sunfoil Oil, 2kg Tastic Rice, 2kg Huletts Sugar, 2 cans of KOO Baked Beans, and Five Roses Tea (100s).</p>
+                        <div class="deal-price-row">
+                            <div class="price-container">
+                                <span class="current-price">R 299.00</span>
+                                <span class="old-price">R 380.00</span>
+                            </div>
+                            <span class="savings-tag">Save R 81!</span>
+                        </div>
+                        <div class="deal-footer">
+                            <span class="layby-badge"><i class="fas fa-wallet"></i> Lay-By Available</span>
+                            <a href="https://wa.me/27876543210?text=Hi%20Kenterton%20Shopping%20Center!%20I'd%20like%20to%20order%20the%20Checksave%20Super%20Family%20Food%20Combo%20for%20R299." target="_blank" class="btn btn-whatsapp btn-sm">
+                                <i class="fab fa-whatsapp"></i> Order
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Deal 2 (Kenterton Hardware) -->
+                <div class="deal-card" data-category="hardware">
+                    <div class="deal-img-wrapper">
+                        <img src="assets/hardware_combo.jpg" alt="Kenterton Hardware Combo" class="deal-img">
+                        <span class="deal-badge badge-layby">Best Seller</span>
+                    </div>
+                    <div class="deal-content">
+                        <div class="deal-tenant">
+                            <span class="tenant-logo-placeholder logo-hardware">Kenterton Hardware</span>
+                        </div>
+                        <h3 class="deal-title">Builder's Starter Combo</h3>
+                        <p class="deal-description">Includes a heavy-duty Lasher Green Wheelbarrow, a premium Lasher Claw Hammer, an 8-piece Mastercraft Screwdriver set, Stanley Tape Measure (8m), and a 5L tin of Dulux Green Paint.</p>
+                        <div class="deal-price-row">
+                            <div class="price-container">
+                                <span class="current-price">R 1,299.00</span>
+                                <span class="old-price">R 1,650.00</span>
+                            </div>
+                            <span class="savings-tag">Save R 351!</span>
+                        </div>
+                        <div class="deal-footer">
+                            <span class="layby-badge"><i class="fas fa-wallet"></i> 3-Month Lay-By</span>
+                            <a href="https://wa.me/27876543210?text=Hi%20Kenterton%20Shopping%20Center!%20I'd%20like%20to%20order%20the%20Hardware%20Builder's%20Starter%20Combo%20for%20R1299." target="_blank" class="btn btn-whatsapp btn-sm">
+                                <i class="fab fa-whatsapp"></i> Order
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Deal 3 (Pharmacy) -->
+                <div class="deal-card" data-category="other">
+                    <div class="deal-img-wrapper">
+                        <div class="placeholder-card-img bg-gradient-purple">
+                            <i class="fas fa-heartbeat"></i>
+                        </div>
+                        <span class="deal-badge badge-info">Healthy Saving</span>
+                    </div>
+                    <div class="deal-content">
+                        <div class="deal-tenant">
+                            <span class="tenant-logo-placeholder logo-pharmacy">Kenterton Pharmacy</span>
+                        </div>
+                        <h3 class="deal-title">Winter Wellness Pack</h3>
+                        <p class="deal-description">Includes high-strength Vitamin C (30 tabs), Cough Syrup, Med-Lemon (8s), and a digital thermometer to keep your family safe this winter.</p>
+                        <div class="deal-price-row">
+                            <div class="price-container">
+                                <span class="current-price">R 149.00</span>
+                                <span class="old-price">R 195.00</span>
+                            </div>
+                            <span class="savings-tag">Save R 46!</span>
+                        </div>
+                        <div class="deal-footer">
+                            <span class="layby-badge text-muted"><i class="fas fa-times-circle"></i> Cash Only</span>
+                            <a href="https://wa.me/27876543210?text=Hi%20Kenterton%20Shopping%20Center!%20I'd%20like%20to%20order%20the%20Winter%20Wellness%20Pack%20for%20R149%20from%20the%20pharmacy." target="_blank" class="btn btn-whatsapp btn-sm">
+                                <i class="fab fa-whatsapp"></i> Order
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Deal 4 (Furniture) -->
+                <div class="deal-card" data-category="other">
+                    <div class="deal-img-wrapper">
+                        <div class="placeholder-card-img bg-gradient-orange">
+                            <i class="fas fa-couch"></i>
+                        </div>
+                        <span class="deal-badge badge-layby">Big Lay-By Special</span>
+                    </div>
+                    <div class="deal-content">
+                        <div class="deal-tenant">
+                            <span class="tenant-logo-placeholder logo-furniture">Kenterton Furniture</span>
+                        </div>
+                        <h3 class="deal-title">Comfy 3-Piece Lounge Suite</h3>
+                        <p class="deal-description">Locally crafted, ultra-durable fabric sofa set. Available in charcoal grey or chocolate brown. Free delivery within 10km of Kenterton!</p>
+                        <div class="deal-price-row">
+                            <div class="price-container">
+                                <span class="current-price">R 3,999.00</span>
+                                <span class="old-price">R 4,800.00</span>
+                            </div>
+                            <span class="savings-tag">Save R 801!</span>
+                        </div>
+                        <div class="deal-footer">
+                            <span class="layby-badge"><i class="fas fa-wallet"></i> Up to 6-Months Lay-By</span>
+                            <a href="https://wa.me/27876543210?text=Hi%20Kenterton%20Shopping%20Center!%20I'd%20like%20to%20inquire%20about%20laying%20by%20the%203-Piece%20Lounge%20Suite%20for%20R3999." target="_blank" class="btn btn-whatsapp btn-sm">
+                                <i class="fab fa-whatsapp"></i> Inquiry
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Delivery Guide Section -->
+    <section class="delivery-section" id="delivery">
+        <div class="container">
+            <div class="delivery-wrapper">
+                <div class="delivery-text-content">
+                    <span class="section-tagline tag-light">Easy & Convenient</span>
+                    <h2 class="section-title text-white">How Our WhatsApp Delivery Works</h2>
+                    <p class="text-white-muted">You don't need to travel all the way if you are busy or need delivery. We bring your order straight to you. Just follow these simple steps:</p>
+                    
+                    <div class="steps-list">
+                        <div class="step-item">
+                            <div class="step-number">1</div>
+                            <div class="step-desc">
+                                <h3 class="text-white">Choose Your Items</h3>
+                                <p class="text-white-muted">Browse our featured specials above or check our TikTok unboxings for live pricing drops.</p>
+                            </div>
+                        </div>
+                        <div class="step-item">
+                            <div class="step-number">2</div>
+                            <div class="step-desc">
+                                <h3 class="text-white">Send Us a WhatsApp Message</h3>
+                                <p class="text-white-muted">Click any WhatsApp button on this site or save our number. Tell us what you want and where you want it delivered.</p>
+                            </div>
+                        </div>
+                        <div class="step-item">
+                            <div class="step-number">3</div>
+                            <div class="step-desc">
+                                <h3 class="text-white">Pay Securely on Delivery</h3>
+                                <p class="text-white-muted">We offer Cash on Delivery (COD) or Card/Instant EFT swipe option right at your doorstep.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="delivery-action">
+                        <a href="https://wa.me/27876543210?text=Hi%20Kenterton%20Shopping%20Center!%20I%20want%20to%20place%20an%20order%20for%20delivery." target="_blank" class="btn btn-light-whatsapp">
+                            <i class="fab fa-whatsapp"></i> Chat Now to Order
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="delivery-visual">
+                    <div class="phone-mockup">
+                        <div class="phone-screen">
+                            <div class="whatsapp-chat-header">
+                                <div class="chat-avatar"><i class="fas fa-store"></i></div>
+                                <div class="chat-user-info">
+                                    <span class="chat-name">Kenterton Hub</span>
+                                    <span class="chat-status">Online</span>
+                                </div>
+                                <div class="chat-header-actions">
+                                    <i class="fas fa-phone"></i>
+                                    <i class="fas fa-ellipsis-v"></i>
+                                </div>
+                            </div>
+                            <div class="whatsapp-chat-body">
+                                <div class="chat-msg chat-msg-received">
+                                    <p>Sanibonani! Welcome to Kenterton Shopping Center. How can we help you today? We deliver groceries, hardware, and furniture. 🚚</p>
+                                    <span class="chat-time">10:14 AM</span>
+                                </div>
+                                <div class="chat-msg chat-msg-sent">
+                                    <p>Sawubona! I want to order the Checksave Grocery Combo (R299) and get it delivered to my house in Kenterton. 🪣🌾</p>
+                                    <span class="chat-time">10:15 AM</span>
+                                </div>
+                                <div class="chat-msg chat-msg-received">
+                                    <p>Yebo, absolute pleasure! Please send us your house address. We have driver in your area today. You can pay with Cash or Card Swipe on delivery. 👍</p>
+                                    <span class="chat-time">10:16 AM</span>
+                                </div>
+                                <div class="chat-typing-indicator" id="chatTyping">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TikTok & Social Showcase -->
+    <section class="social-section" id="social">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tagline">Trending in Kenterton</span>
+                <h2 class="section-title">TikTok & Social Updates</h2>
+                <p class="section-desc">Watch real-time unboxings, price drops, and specials from our tenants. Follow us on social media to never miss a bargain!</p>
+            </div>
+
+            <div class="tiktok-grid">
+                
+                <!-- TikTok Card 1 -->
+                <div class="tiktok-card">
+                    <div class="tiktok-video-thumb">
+                        <div class="overlay-play"><i class="fas fa-play"></i></div>
+                        <div class="thumb-gradient"></div>
+                        <span class="views-counter"><i class="fas fa-eye"></i> 14.5k views</span>
+                        <div class="tiktok-creator">
+                            <span class="creator-avatar"><i class="fas fa-tools"></i></span>
+                            <span class="creator-handle">@kenterton_hardware</span>
+                        </div>
+                    </div>
+                    <div class="tiktok-card-content">
+                        <p class="tiktok-caption">Wheelbarrow combo unboxing & lay-by details! Pay small-small starting from R250/month. 🛠️🇿🇦 #SouthAfrica #KZN #HardwareDeals</p>
+                        <div class="tiktok-stats">
+                            <span><i class="far fa-heart"></i> 1.2k</span>
+                            <span><i class="far fa-comment"></i> 89</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TikTok Card 2 -->
+                <div class="tiktok-card">
+                    <div class="tiktok-video-thumb">
+                        <div class="overlay-play"><i class="fas fa-play"></i></div>
+                        <div class="thumb-gradient"></div>
+                        <span class="views-counter"><i class="fas fa-eye"></i> 22.1k views</span>
+                        <div class="tiktok-creator">
+                            <span class="creator-avatar"><i class="fas fa-shopping-basket"></i></span>
+                            <span class="creator-handle">@checksave_kenterton</span>
+                        </div>
+                    </div>
+                    <div class="tiktok-card-content">
+                        <p class="tiktok-caption">MASSIVE PRICE DROPS! Check out our grocery combo for R299. Feed the family for less this week! 🌽🛒 #Checksave #BudgetGroceries #Savings</p>
+                        <div class="tiktok-stats">
+                            <span><i class="far fa-heart"></i> 2.4k</span>
+                            <span><i class="far fa-comment"></i> 156</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TikTok Card 3 -->
+                <div class="tiktok-card">
+                    <div class="tiktok-video-thumb">
+                        <div class="overlay-play"><i class="fas fa-play"></i></div>
+                        <div class="thumb-gradient"></div>
+                        <span class="views-counter"><i class="fas fa-eye"></i> 9.8k views</span>
+                        <div class="tiktok-creator">
+                            <span class="creator-avatar"><i class="fas fa-user-friends"></i></span>
+                            <span class="creator-handle">@kenterton_hub</span>
+                        </div>
+                    </div>
+                    <div class="tiktok-card-content">
+                        <p class="tiktok-caption">Market Day DJ set highlight! Thanks to everyone who joined us in the parking lot this weekend. Next activation is July 25th! 🎶🔥 #KZNLocal #MarketDay</p>
+                        <div class="tiktok-stats">
+                            <span><i class="far fa-heart"></i> 840</span>
+                            <span><i class="far fa-comment"></i> 43</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="social-cta">
+                <a href="https://www.tiktok.com" target="_blank" class="btn btn-outline-dark"><i class="fab fa-tiktok"></i> Follow Us on TikTok</a>
+                <a href="https://www.facebook.com" target="_blank" class="btn btn-outline-dark"><i class="fab fa-facebook-f"></i> Follow Us on Facebook</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Community Noticeboard Section -->
+    <section class="notices-section" id="notices">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tagline">What's Happening</span>
+                <h2 class="section-title">Community Noticeboard</h2>
+                <p class="section-desc">More than just shopping. We are a community meeting point. Stay updated with local announcements and events!</p>
+            </div>
+
+            <div class="notices-grid">
+                
+                <!-- Notice 1 -->
+                <div class="notice-card">
+                    <div class="notice-date">
+                        <span class="date-day">25</span>
+                        <span class="date-month">Jul</span>
+                    </div>
+                    <div class="notice-content">
+                        <span class="notice-category cat-event">Community Event</span>
+                        <h3 class="notice-title">Kenterton Market Day & Live DJ</h3>
+                        <p>Join us in the main parking lot from 9:00 AM to 4:00 PM. Local crafters, food stalls, face painting for kids, and a live DJ set by DJ Zulu-Boy. Fun for the whole family!</p>
+                    </div>
+                </div>
+
+                <!-- Notice 2 -->
+                <div class="notice-card">
+                    <div class="notice-date">
+                        <span class="date-day">01</span>
+                        <span class="date-month">Aug</span>
+                    </div>
+                    <div class="notice-content">
+                        <span class="notice-category cat-promotion">Tenant Promo</span>
+                        <h3 class="notice-title">Spring Lay-By Promotion Launch</h3>
+                        <p>Get ready for spring! Kenterton Hardware and Kenterton Furniture will launch their zero-interest 4-month lay-by special. Secure your agricultural tools and appliances early.</p>
+                    </div>
+                </div>
+
+                <!-- Notice 3 -->
+                <div class="notice-card">
+                    <div class="notice-date">
+                        <span class="date-day">15</span>
+                        <span class="date-month">Aug</span>
+                    </div>
+                    <div class="notice-content">
+                        <span class="notice-category cat-info">Public Service</span>
+                        <h3 class="notice-title">SASSA Payout Day Support</h3>
+                        <p>During the SASSA payout days, Kenterton Shopping Center will have extra security, shaded seating, and free hot tea/coffee at the entrance for elders waiting in line.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQs Section -->
+    <section class="faq-section">
+        <div class="container faq-container">
+            <div class="section-header">
+                <span class="section-tagline">Got Questions?</span>
+                <h2 class="section-title">Frequently Asked Questions</h2>
+            </div>
+            
+            <div class="faq-accordion">
+                <div class="faq-item">
+                    <button class="faq-question">How does the delivery work and how much does it cost? <i class="fas fa-chevron-down"></i></button>
+                    <div class="faq-answer">
+                        <p>It's simple! Check out the current specials on this website, and click "Order" or click the WhatsApp button to chat with us. Delivery within Kenterton town is R20. Delivery to surrounding areas varies from R30 to R50 depending on distance. We confirm the fee in the chat before driving.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question">What payment options do you support for delivery? <i class="fas fa-chevron-down"></i></button>
+                    <div class="faq-answer">
+                        <p>We support Cash on Delivery (COD), Card Swipe (our driver brings a portable speedpoint machine), or instant EFT. You pay only when the goods arrive at your door.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">How do I start a Lay-By and what are the terms? <i class="fas fa-chevron-down"></i></button>
+                    <div class="faq-answer">
+                        <p>Lay-by is available at Kenterton Hardware and Kenterton Furniture. You need to pay a 10% minimum deposit to secure the item, and then make small flexible payments over 3 to 6 months depending on the item. There is zero interest! Message us on WhatsApp or visit the store to start a lay-by.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">Can I order items that are not listed on the Deals page? <i class="fas fa-chevron-down"></i></button>
+                    <div class="faq-answer">
+                        <p>Yes, absolutely! Our deals list only shows the most popular combos. You can send us a message on WhatsApp with your shopping list for Checksave, Kenterton Hardware, or the Pharmacy, and we will gather the items and send you a total quote.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section & Contact Info -->
+    <footer class="main-footer" id="contact">
+        <div class="container footer-container">
+            <div class="footer-col brand-col">
+                <a href="#" class="footer-logo"><span class="logo-accent">Kenterton</span> Hub</a>
+                <p class="footer-text">The primary convenience and gathering hub for the Kenterton community, KwaZulu-Natal. Quality products, low prices, and financial trust.</p>
+                <div class="footer-socials">
+                    <a href="https://www.tiktok.com" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                    <a href="https://www.facebook.com" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-col links-col">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="#about">About Center</a></li>
+                    <li><a href="#deals">Tenant Deals</a></li>
+                    <li><a href="#delivery">WhatsApp Order Guide</a></li>
+                    <li><a href="#social">TikTok Videos</a></li>
+                    <li><a href="#notices">Community Noticeboard</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col contact-col">
+                <h3>Contact & Location</h3>
+                <ul class="footer-contact">
+                    <li><i class="fas fa-map-marker-alt"></i> Main Road, Kenterton, KwaZulu-Natal, 4275</li>
+                    <li><i class="fas fa-phone-alt"></i> +27 (0) 87 654 3210</li>
+                    <li><i class="fab fa-whatsapp"></i> +27 (0) 87 654 3210 (WhatsApp Orders)</li>
+                    <li><i class="fas fa-envelope"></i> info@kentertoncenter.co.za</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container footer-bottom-container">
+                <p>&copy; 2026 Kenterton Shopping Center. All Rights Reserved. Built with ❤️ for KZN community.</p>
+                <a href="#" class="back-to-top"><i class="fas fa-arrow-up"></i> Top</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Widget -->
+    <a href="https://wa.me/27876543210?text=Hi%20Kenterton%20Shopping%20Center!%20I'd%20like%20to%20order%20or%20inquire%20about%20your%20specials." target="_blank" class="whatsapp-floating-widget" aria-label="Chat with us on WhatsApp">
+        <span class="widget-notification-dot"></span>
+        <div class="widget-tooltip">
+            <span class="tooltip-title">Kenterton Center Online</span>
+            <span class="tooltip-text">How can we help you today?</span>
+        </div>
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Main JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
